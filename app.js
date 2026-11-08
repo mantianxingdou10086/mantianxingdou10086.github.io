@@ -11,7 +11,7 @@ $('#motion-toggle').onclick=()=>{userMotion=!userMotion;try{localStorage.setItem
 $('#year').textContent=new Date().getFullYear();
 let toastTimer;
 function toast(text){$('#toast').textContent=text;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),4000);}
-async function api(path='/api/posts',options={}){if(staticSite){if(path!=='/api/posts'||options.method)throw Error('公开站点不提供编辑功能');path='./posts.json';}const response=await fetch(path,options);const data=await response.json();if(!response.ok)throw Error(data.error||'操作失败');return data;}
+async function api(path='/api/posts',options={}){if(staticSite){if(path!=='/api/posts'||options.method)throw Error('公开站点不提供编辑功能');path='./posts.json';options={...options,cache:'no-store'};}const response=await fetch(path,options);const data=await response.json();if(!response.ok)throw Error(data.error||'操作失败');return data;}
 const date=p=>new Date(p.createdAt).toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'}).replaceAll('/','.');
 const summary=p=>p.body.replace(/[#`>*]/g,'').replace(/\n/g,' ').slice(0,100);
 function inline(text){return escape(text).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');}
