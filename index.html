@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="static">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="满天星斗烟火繁的个人空间，记录技术探索、项目实践与生活随想。">
+  <meta name="theme-color" content="#f3f5f8">
+  <title>满天星斗烟火繁 · 个人空间</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23243750'/%3E%3Cpath d='M20 6 23 17 34 20 23 23 20 34 17 23 6 20 17 17Z' fill='%23d8e7fc'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">跳转到正文</a>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/" aria-label="满天星斗烟火繁 首页"><span class="brand-star" aria-hidden="true">✦</span><span class="brand-name">满天星斗烟火繁</span></a>
+      <p class="sidebar-intro">在代码里探索，<br>也在生活里寻找答案。</p>
+      <nav class="navigation" aria-label="主导航">
+        <a href="#/" data-nav="home"><span aria-hidden="true">⌂</span>首页</a>
+        <a href="#/posts" data-nav="posts"><span aria-hidden="true">≡</span>文章</a>
+        <a href="#/projects" data-nav="projects"><span aria-hidden="true">◇</span>项目</a>
+        <a href="#/journey" data-nav="journey"><span aria-hidden="true">⌁</span>经历</a>
+        <a href="#/about" data-nav="about"><span aria-hidden="true">◯</span>关于我</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="location"><span class="status-dot"></span>深圳 · 在学习，也在创造</div>
+        <a class="github" href="https://github.com/mantianxingdou10086" target="_blank" rel="noopener noreferrer" aria-label="GitHub：mantianxingdou10086">GitHub：mantianxingdou10086 <span aria-hidden="true">↗</span></a>
+        <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="true">动态效果：开</button>
+      </div>
+    </aside>
+    <main id="content" tabindex="-1">
+      <header class="topbar"><span id="section-label">个人空间</span><span class="topbar-note">一些探索，一些记录</span></header>
+      <div id="view" aria-live="polite"></div>
+      <footer class="site-footer"><span>© <span id="year"></span> 满天星斗烟火繁</span><span>让想法有处安放。</span></footer>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
